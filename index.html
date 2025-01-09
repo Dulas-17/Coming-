@@ -6,7 +6,173 @@
 
     <title>Upcoming</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <style>
+        }
+
+        main {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(120deg, black, gold);
+            color: gold;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        .audio-container, .video-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid rgba(355, 355, 355, 0.3);
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: left;
+        }
+
+        .audio-container h4, .video-container h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        audio,
+video {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+        .video-container video {
+            max-width: 100%; /* Keeps video within container */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        .profile-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: left;
+        }
+
+        .profile-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid black;
+  border-top-color: white;
+  animation: spin 3s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.loaded {
+  display: none;
+}
+
+audio::-webkit-media-controls-panel {
+background-image: linear-gradient(180deg, gold,black);
+background-size: 100% 100%;
+}
+
+audio::-webkit-media-controls-play-button {
+background-color: transparent;
+border: none;
+padding: 0;
+}
+
+audio::-webkit-media-controls-timeline {
+background-image: linear-gradient(120deg, white);
+background-size: 100% 100%;
+}
+
+audio::-webkit-media-controls-mute-button {
+background-color: transparent;
+border: none;
+padding: 0;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 15px;
+  border:3px solid black ;
+  background: linear-gradient(180deg,gold,gold);
+  color: black;
+  outline: none;
+}
+
+#threads-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.thread {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.thread-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+ </style>
 
 </head>
 <body>
